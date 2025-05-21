@@ -4,8 +4,10 @@ const conditionalSum = function (values = [], condition = "") {
   const filtered = values.filter((number) =>
     condition === "even" ? isEvenNumber(number) : !isEvenNumber(number)
   );
-  return filtered.reduce((prev,curr) => prev + curr, 0);
+  return filtered.reduce((prev, curr) => prev + curr, 0);
 };
+
+export { isEvenNumber, conditionalSum };
 
 console.log(conditionalSum([1, 2, 3, 4, 5], "even")); // 6
 console.log(conditionalSum([1, 2, 3, 4, 5], "odd")); // 9

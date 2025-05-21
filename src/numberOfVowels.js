@@ -4,3 +4,5 @@ const numberOfVowels = function (data) {
     .split("")
     .reduce((prev, curr) => (vowels.includes(curr) ? prev + 1 : prev), 0);
 };
+
+export { numberOfVowels };
