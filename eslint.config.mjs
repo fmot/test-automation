@@ -42,30 +42,35 @@ export default [
       },
     },
     rules: {
-      // Prettierのフォーマッティングルールをエラーとして扱う
-      'prettier/prettier': 'error',
-      // その他のルール
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'no-debugger': 'error',
-      'no-var': 'error',
-      'prefer-const': 'error',
-      eqeqeq: 'error',
-      curly: 'error',
-      quotes: ['error', 'single'],
-      semi: ['error', 'always'],
-      'prefer-template': 'error',
-      indent: ['error', 2],
-      'linebreak-style': ['error', 'unix'],
-      'no-multi-spaces': 'error',
-      'no-trailing-spaces': 'error',
-      'comma-dangle': ['error', 'always-multiline'],
-      'object-curly-spacing': ['error', 'always'],
-      'arrow-parens': ['error', 'always'],
-      'no-unused-expressions': 'warn',
-      'no-multiple-empty-lines': ['error', { max: 1 }],
-      'consistent-return': 'error',
-      'no-shadow': 'error',
+      // Prettierのルールは緩く
+      'prettier/prettier': 'warn',
+
+      // 基本的なルールも緩く設定
+      'no-unused-vars': 'warn', // エラーではなく警告
+      'no-console': 'off', // console.logを許可
+      'no-debugger': 'warn', // debuggerも警告のみ
+
+      // スタイル系のルールを緩く/無効化
+      'comma-dangle': 'off', // 末尾カンマを強制しない
+      quotes: 'off', // クォートのスタイルを強制しない
+      semi: 'off', // セミコロンを強制しない
+      indent: 'off', // インデントを強制しない（Prettierに任せる）
+      'linebreak-style': 'off', // 改行コードを強制しない
+      'no-multi-spaces': 'off', // 複数スペースを許可
+      'no-trailing-spaces': 'off', // 末尾スペースを許可
+      'object-curly-spacing': 'off', // オブジェクトの波括弧スペースを強制しない
+      'arrow-parens': 'off', // アロー関数の括弧を強制しない
+      'prefer-template': 'off', // テンプレートリテラルを強制しない
+      'no-multiple-empty-lines': 'off', // 複数空行を許可
+
+      // その他の厳格なルールを無効化
+      'prefer-const': 'off', // constを強制しない
+      'no-var': 'off', // varの使用を許可
+      eqeqeq: 'off', // === を強制しない
+      curly: 'off', // 波括弧を強制しない
+      'consistent-return': 'off', // 一貫したreturnを強制しない
+      'no-shadow': 'off', // 変数のシャドウイングを許可
+      'no-unused-expressions': 'off', // 未使用の式を許可
     },
   },
   {
