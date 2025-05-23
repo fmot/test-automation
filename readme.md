@@ -21,7 +21,7 @@ In babel.config.js
 
 ```js
 module.exports = {
-  presets: [["@babel/preset-env", { targets: { node: "current" } }]]
+  presets: [['@babel/preset-env', { targets: { node: 'current' } }]],
 };
 ```
 
@@ -65,7 +65,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "20"
+          node-version: '20'
 
       - name: Install dependencies
         run: npm ci
@@ -81,4 +81,3 @@ Commit and push the GitHub Actions configuration file (`ci.yml`) to your reposit
 ### Step 8: Check GitHub Actions
 
 GitHub Actions will now automatically run your tests whenever you push new code to the repository.
-

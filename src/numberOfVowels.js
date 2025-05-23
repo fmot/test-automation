@@ -1,7 +1,7 @@
 const numberOfVowels = function (data) {
-  const vowels = ["a", "e", "i", "o", "u"];
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
   return data
-    .split("")
+    .split('')
     .reduce((prev, curr) => (vowels.includes(curr) ? prev + 1 : prev), 0);
 };
 
